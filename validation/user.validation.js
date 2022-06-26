@@ -8,9 +8,19 @@ const registerValidationSchema = joi.object({
 	email: joi.string().email(),
 });
 
+const loginValidationSchema = joi.object({
+	password: joi.string().pattern(new RegExp("^[a-zA-Z0-9]{3,30}$")),
+	email: joi.string().email(),
+});
+
+function validatelogin(req, res, next) {
+	validate(req, res, next, loginValidationSchema);
+}
 function validateRegister(req, res, next) {
 	validate(req, res, next, registerValidationSchema);
 }
+
 module.exports = {
 	validateRegister,
+	validatelogin,
 };

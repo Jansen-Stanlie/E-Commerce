@@ -103,6 +103,7 @@ const updateProduct = async (req, res, next) => {
 		next(err);
 	}
 };
+
 module.exports = {
 	addProduct,
 	getProduct,
