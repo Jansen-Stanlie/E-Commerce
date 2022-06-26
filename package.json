@@ -1,0 +1,26 @@
+{
+	"name": "e-commerce-1.0",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"db:migrate": "sequelize db:migrate",
+		"db:migrate:rollback": "sequelize db:migrate:undo",
+		"db:seed": "sequelize-cli db:seed:all",
+		"db:seed:one": "sequelize db:seed --seed",
+		"db:seed:undo": "sequelize-cli db:seed:undo",
+		"db:seed:make": "sequelize-cli seed:generate --name"
+	},
+	"author": "Jansen",
+	"license": "ISC",
+	"dependencies": {
+		"bcrypt": "^5.0.1",
+		"express": "^4.18.1",
+		"joi": "^17.6.0",
+		"jsonwebtoken": "^8.5.1",
+		"nodemon": "^2.0.16",
+		"pg": "^8.7.3",
+		"sequelize": "^6.21.0"
+	}
+}
