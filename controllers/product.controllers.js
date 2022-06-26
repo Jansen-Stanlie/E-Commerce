@@ -68,7 +68,7 @@ const updateProduct = async (req, res, next) => {
 				console.log("Product", product);
 				if (product !== null) {
 					return Product.update(
-						{ name: name, price: price, quantity: quantity },
+						{ price: price, quantity: quantity },
 						{
 							where: { name: name },
 						}

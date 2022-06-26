@@ -108,10 +108,18 @@ const purchaseItem = async (req, res, next) => {
 const getHistory = async (req, res, next) => {
 	const token = req.headers["auth"];
 
+	if (!token) {
+		return res.status(500).send({
+			message: "Internal server Error",
+			error: "Token is null",
+		});
+	}
+
 	const user_id = jwt.verify(token, privateKey, (err, decoded) => {
 		return decoded.id;
 		console.log("Id User", decoded.id);
 	});
+
 	console.log("user_id", user_id);
 	try {
 		const histories = await History.findAll({
