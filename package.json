@@ -10,12 +10,14 @@
 		"db:seed": "sequelize-cli db:seed:all",
 		"db:seed:one": "sequelize db:seed --seed",
 		"db:seed:undo": "sequelize-cli db:seed:undo",
-		"db:seed:make": "sequelize-cli seed:generate --name"
+		"db:seed:make": "sequelize-cli seed:generate --name",
+		"start": "node index.js"
 	},
 	"author": "Jansen",
 	"license": "ISC",
 	"dependencies": {
 		"bcrypt": "^5.0.1",
+		"dotenv": "^16.0.1",
 		"express": "^4.18.1",
 		"joi": "^17.6.0",
 		"jsonwebtoken": "^8.5.1",
